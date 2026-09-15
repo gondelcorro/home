@@ -1,0 +1,26 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import {LottieComponent} from 'ngx-lottie';
+import {AppComponent} from './app.component';
+import { provideLottieOptions } from 'ngx-lottie';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    LottieComponent
+  ],
+  providers: [
+    provideLottieOptions({
+      player: () => import('lottie-web')
+    })
+  ],
+  bootstrap: [
+    AppComponent
+  ]
+})
+export class AppModule { }
