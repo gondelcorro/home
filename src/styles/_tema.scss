@@ -1,0 +1,41 @@
+@use "@angular/material" as mat;
+
+html {
+  color-scheme: light;
+
+  --sjs-celeste: #79c4e8;
+  --sjs-punzo: #a7193b;
+  --sjs-dorado: #c49a3a;
+  --sjs-blanco: #ffffff;
+  --sjs-texto: #17324d;
+
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$red-palette,
+        tertiary: mat.$azure-palette,
+        theme-type: light,
+      ),
+      typography: Arial,
+      density: 0,
+    )
+  );
+
+  @include mat.theme-overrides(
+    (
+      primary: var(--sjs-punzo),
+      on-primary: var(--sjs-blanco),
+      tertiary: var(--sjs-celeste),
+      on-tertiary: var(--sjs-texto),
+      surface: var(--sjs-blanco),
+      on-surface: var(--sjs-texto),
+    )
+  );
+}
+
+body {
+  margin: 0;
+  font: var(--mat-sys-body-large);
+  color: var(--sjs-texto);
+  background-color: var(--sjs-blanco);
+}
