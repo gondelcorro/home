@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { AnimationOptions, LottieComponent } from 'ngx-lottie';
-
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -24,7 +23,5 @@ export class HomeComponent {
   options2: AnimationOptions = {
     path: './assets/animations/calendar.json',
   };
-
-  public url_login = environment.url_login;
   public url_registro = environment.url_registro;
 }

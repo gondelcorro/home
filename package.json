@@ -21,6 +21,8 @@
     "@angular/platform-browser": "^20.3.29",
     "@angular/platform-browser-dynamic": "^20.3.29",
     "@angular/router": "^20.3.29",
+    "@auth0/angular-jwt": "5.0.1",
+    "jwt-decode": "2.2.0",
     "lottie-web": "^5.13.0",
     "ngx-lottie": "^20.0.0",
     "rxjs": "^6.6.7",

@@ -1,0 +1,3096 @@
+/*
+ * Transitional Home stylesheet, scoped from assets/css/main.css.
+ * Each selector is restricted to descendants of app-home.
+ * Keep this file in assets/css so existing relative asset URLs still resolve.
+ * Retire it when the legacy Home template is replaced.
+ */
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
+
+/*
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+:where(app-home) html,
+:where(app-home) body,
+:where(app-home) div,
+:where(app-home) span,
+:where(app-home) applet,
+:where(app-home) object,
+:where(app-home) iframe,
+:where(app-home) h1,
+:where(app-home) h2,
+:where(app-home) h3,
+:where(app-home) h4,
+:where(app-home) h5,
+:where(app-home) h6,
+:where(app-home) p,
+:where(app-home) blockquote,
+:where(app-home) pre,
+:where(app-home) a,
+:where(app-home) abbr,
+:where(app-home) acronym,
+:where(app-home) address,
+:where(app-home) big,
+:where(app-home) cite,
+:where(app-home) code,
+:where(app-home) del,
+:where(app-home) dfn,
+:where(app-home) em,
+:where(app-home) img,
+:where(app-home) ins,
+:where(app-home) kbd,
+:where(app-home) q,
+:where(app-home) s,
+:where(app-home) samp,
+:where(app-home) small,
+:where(app-home) strike,
+:where(app-home) strong,
+:where(app-home) sub,
+:where(app-home) sup,
+:where(app-home) tt,
+:where(app-home) var,
+:where(app-home) b,
+:where(app-home) u,
+:where(app-home) i,
+:where(app-home) center,
+:where(app-home) dl,
+:where(app-home) dt,
+:where(app-home) dd,
+:where(app-home) ol,
+:where(app-home) ul,
+:where(app-home) li,
+:where(app-home) fieldset,
+:where(app-home) form,
+:where(app-home) label,
+:where(app-home) legend,
+:where(app-home) table,
+:where(app-home) caption,
+:where(app-home) tbody,
+:where(app-home) tfoot,
+:where(app-home) thead,
+:where(app-home) tr,
+:where(app-home) th,
+:where(app-home) td,
+:where(app-home) article,
+:where(app-home) aside,
+:where(app-home) canvas,
+:where(app-home) details,
+:where(app-home) embed,
+:where(app-home) figure,
+:where(app-home) figcaption,
+:where(app-home) footer,
+:where(app-home) header,
+:where(app-home) hgroup,
+:where(app-home) menu,
+:where(app-home) nav,
+:where(app-home) output,
+:where(app-home) ruby,
+:where(app-home) section,
+:where(app-home) summary,
+:where(app-home) time,
+:where(app-home) mark,
+:where(app-home) audio,
+:where(app-home) video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;}
+
+:where(app-home) article,
+:where(app-home) aside,
+:where(app-home) details,
+:where(app-home) figcaption,
+:where(app-home) figure,
+:where(app-home) footer,
+:where(app-home) header,
+:where(app-home) hgroup,
+:where(app-home) menu,
+:where(app-home) nav,
+:where(app-home) section {
+	display: block;}
+
+:where(app-home) body {
+	line-height: 1;
+}
+
+:where(app-home) ol,
+:where(app-home) ul {
+	list-style: none;
+}
+
+:where(app-home) blockquote,
+:where(app-home) q {
+	quotes: none;
+}
+
+	:where(app-home) blockquote:before,
+:where(app-home) blockquote:after,
+:where(app-home) q:before,
+:where(app-home) q:after {
+		content: '';
+		content: none;
+	}
+
+:where(app-home) table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:where(app-home) body {
+	-webkit-text-size-adjust: none;
+}
+
+:where(app-home) mark {
+	background-color: transparent;
+	color: inherit;
+}
+
+:where(app-home) input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+:where(app-home) input,
+:where(app-home) select,
+:where(app-home) textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+
+/* Basic */
+
+	:where(app-home) html {
+		box-sizing: border-box;
+	}
+
+	:where(app-home) *,
+:where(app-home) *:before,
+:where(app-home) *:after {
+		box-sizing: inherit;
+	}
+
+	:where(app-home) body {
+		background: #252122;
+		background-image: url("images/bg02.png");
+	}
+
+		:where(app-home) body.is-preload *,
+:where(app-home) body.is-preload *:before,
+:where(app-home) body.is-preload *:after {
+			-moz-animation: none !important;
+			-webkit-animation: none !important;
+			-ms-animation: none !important;
+			animation: none !important;
+			-moz-transition: none !important;
+			-webkit-transition: none !important;
+			-ms-transition: none !important;
+			transition: none !important;
+		}
+
+	:where(app-home) body,
+:where(app-home) input,
+:where(app-home) textarea,
+:where(app-home) select {
+		font-family: 'Source Sans Pro';
+		font-weight: 300;
+		color: #5d5d5d;
+		font-size: 14pt;
+		line-height: 1.75em;
+	}
+
+	:where(app-home) strong,
+:where(app-home) b {
+		color: #252122;
+		font-weight: 400;
+	}
+
+	:where(app-home) i,
+:where(app-home) em {
+		font-style: italic;
+	}
+
+	:where(app-home) sub {
+		position: relative;
+		top: 0.5em;
+		font-size: 0.8em;
+	}
+
+	:where(app-home) sup {
+		position: relative;
+		top: -0.5em;
+		font-size: 0.8em;
+	}
+
+	:where(app-home) blockquote {
+		border-left: solid 0.75em #dddddd;
+		padding: 1em 0 1em 1.5em;
+		font-style: italic;
+	}
+
+	:where(app-home) h1,
+:where(app-home) h2,
+:where(app-home) h3,
+:where(app-home) h4,
+:where(app-home) h5,
+:where(app-home) h6 {
+		color: #252122;
+		font-weight: 700;
+	}
+
+	:where(app-home) h1 a,
+:where(app-home) h2 a,
+:where(app-home) h3 a,
+:where(app-home) h4 a,
+:where(app-home) h5 a,
+:where(app-home) h6 a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	:where(app-home) h2 {
+		font-size: 1.5em;
+	}
+
+	:where(app-home) h3 {
+		font-size: 1.35em;
+	}
+
+	:where(app-home) a {
+		color: #E31E24;
+		text-decoration: underline;
+	}
+
+		:where(app-home) a:hover {
+			text-decoration: none;
+		}
+
+	:where(app-home) br.clear {
+		clear: both;
+	}
+
+	:where(app-home) hr {
+		border: 0;
+		border-top: solid 1px #dddddd;
+		height: 1px;
+		margin: 2em 0 2em 0;
+	}
+
+	:where(app-home) p,
+:where(app-home) ul,
+:where(app-home) ol,
+:where(app-home) dl,
+:where(app-home) table {
+		margin-bottom: 2em;
+	}
+
+/* Container */
+
+	:where(app-home) .container {
+		margin: 0 auto;
+		max-width: 100%;
+		width: 70em;
+	}
+
+		@media screen and (max-width: 1680px) {
+
+			:where(app-home) .container {
+				width: 70em;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			:where(app-home) .container {
+				width: calc(100% - 60px);
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			:where(app-home) .container {
+				width: calc(100% - 80px);
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			:where(app-home) .container {
+				width: calc(100% - 40px);
+			}
+
+		}
+
+/* Row */
+
+	:where(app-home) .row {
+		display: flex;
+		flex-wrap: wrap;
+		box-sizing: border-box;
+		align-items: stretch;
+	}
+
+		:where(app-home) .row > * {
+			box-sizing: border-box;
+		}
+
+		:where(app-home) .row.gtr-uniform > * > :last-child {
+			margin-bottom: 0;
+		}
+
+		:where(app-home) .row.aln-left {
+			justify-content: flex-start;
+		}
+
+		:where(app-home) .row.aln-center {
+			justify-content: center;
+		}
+
+		:where(app-home) .row.aln-right {
+			justify-content: flex-end;
+		}
+
+		:where(app-home) .row.aln-top {
+			align-items: flex-start;
+		}
+
+		:where(app-home) .row.aln-middle {
+			align-items: center;
+		}
+
+		:where(app-home) .row.aln-bottom {
+			align-items: flex-end;
+		}
+
+		:where(app-home) .row > .imp {
+			order: -1;
+		}
+
+		:where(app-home) .row > .col-1 {
+			width: 8.33333%;
+		}
+
+		:where(app-home) .row > .off-1 {
+			margin-left: 8.33333%;
+		}
+
+		:where(app-home) .row > .col-2 {
+			width: 16.66667%;
+		}
+
+		:where(app-home) .row > .off-2 {
+			margin-left: 16.66667%;
+		}
+
+		:where(app-home) .row > .col-3 {
+			width: 25%;
+		}
+
+		:where(app-home) .row > .off-3 {
+			margin-left: 25%;
+		}
+
+		:where(app-home) .row > .col-4 {
+			width: 33.33333%;
+		}
+
+		:where(app-home) .row > .off-4 {
+			margin-left: 33.33333%;
+		}
+
+		:where(app-home) .row > .col-5 {
+			width: 41.66667%;
+		}
+
+		:where(app-home) .row > .off-5 {
+			margin-left: 41.66667%;
+		}
+
+		:where(app-home) .row > .col-6 {
+			width: 50%;
+		}
+
+		:where(app-home) .row > .off-6 {
+			margin-left: 50%;
+		}
+
+		:where(app-home) .row > .col-7 {
+			width: 58.33333%;
+		}
+
+		:where(app-home) .row > .off-7 {
+			margin-left: 58.33333%;
+		}
+
+		:where(app-home) .row > .col-8 {
+			width: 66.66667%;
+		}
+
+		:where(app-home) .row > .off-8 {
+			margin-left: 66.66667%;
+		}
+
+		:where(app-home) .row > .col-9 {
+			width: 75%;
+		}
+
+		:where(app-home) .row > .off-9 {
+			margin-left: 75%;
+		}
+
+		:where(app-home) .row > .col-10 {
+			width: 83.33333%;
+		}
+
+		:where(app-home) .row > .off-10 {
+			margin-left: 83.33333%;
+		}
+
+		:where(app-home) .row > .col-11 {
+			width: 91.66667%;
+		}
+
+		:where(app-home) .row > .off-11 {
+			margin-left: 91.66667%;
+		}
+
+		:where(app-home) .row > .col-12 {
+			width: 100%;
+		}
+
+		:where(app-home) .row > .off-12 {
+			margin-left: 100%;
+		}
+
+		:where(app-home) .row.gtr-0 {
+			margin-top: 0px;
+			margin-left: 0px;
+		}
+
+			:where(app-home) .row.gtr-0 > * {
+				padding: 0px 0 0 0px;
+			}
+
+			:where(app-home) .row.gtr-0.gtr-uniform {
+				margin-top: 0px;
+			}
+
+				:where(app-home) .row.gtr-0.gtr-uniform > * {
+					padding-top: 0px;
+				}
+
+		:where(app-home) .row.gtr-25 {
+			margin-top: -12.5px;
+			margin-left: -12.5px;
+		}
+
+			:where(app-home) .row.gtr-25 > * {
+				padding: 12.5px 0 0 12.5px;
+			}
+
+			:where(app-home) .row.gtr-25.gtr-uniform {
+				margin-top: -12.5px;
+			}
+
+				:where(app-home) .row.gtr-25.gtr-uniform > * {
+					padding-top: 12.5px;
+				}
+
+		:where(app-home) .row.gtr-50 {
+			margin-top: -25px;
+			margin-left: -25px;
+		}
+
+			:where(app-home) .row.gtr-50 > * {
+				padding: 25px 0 0 25px;
+			}
+
+			:where(app-home) .row.gtr-50.gtr-uniform {
+				margin-top: -25px;
+			}
+
+				:where(app-home) .row.gtr-50.gtr-uniform > * {
+					padding-top: 25px;
+				}
+
+		:where(app-home) .row {
+			margin-top: -50px;
+			margin-left: -50px;
+		}
+
+			:where(app-home) .row > * {
+				padding: 50px 0 0 50px;
+			}
+
+			:where(app-home) .row.gtr-uniform {
+				margin-top: -50px;
+			}
+
+				:where(app-home) .row.gtr-uniform > * {
+					padding-top: 50px;
+				}
+
+		:where(app-home) .row.gtr-150 {
+			margin-top: -75px;
+			margin-left: -75px;
+		}
+
+			:where(app-home) .row.gtr-150 > * {
+				padding: 75px 0 0 75px;
+			}
+
+			:where(app-home) .row.gtr-150.gtr-uniform {
+				margin-top: -75px;
+			}
+
+				:where(app-home) .row.gtr-150.gtr-uniform > * {
+					padding-top: 75px;
+				}
+
+		:where(app-home) .row.gtr-200 {
+			margin-top: -100px;
+			margin-left: -100px;
+		}
+
+			:where(app-home) .row.gtr-200 > * {
+				padding: 100px 0 0 100px;
+			}
+
+			:where(app-home) .row.gtr-200.gtr-uniform {
+				margin-top: -100px;
+			}
+
+				:where(app-home) .row.gtr-200.gtr-uniform > * {
+					padding-top: 100px;
+				}
+
+		@media screen and (max-width: 1680px) {
+
+			:where(app-home) .row {
+				display: flex;
+				flex-wrap: wrap;
+				box-sizing: border-box;
+				align-items: stretch;
+			}
+
+				:where(app-home) .row > * {
+					box-sizing: border-box;
+				}
+
+				:where(app-home) .row.gtr-uniform > * > :last-child {
+					margin-bottom: 0;
+				}
+
+				:where(app-home) .row.aln-left {
+					justify-content: flex-start;
+				}
+
+				:where(app-home) .row.aln-center {
+					justify-content: center;
+				}
+
+				:where(app-home) .row.aln-right {
+					justify-content: flex-end;
+				}
+
+				:where(app-home) .row.aln-top {
+					align-items: flex-start;
+				}
+
+				:where(app-home) .row.aln-middle {
+					align-items: center;
+				}
+
+				:where(app-home) .row.aln-bottom {
+					align-items: flex-end;
+				}
+
+				:where(app-home) .row > .imp-xlarge {
+					order: -1;
+				}
+
+				:where(app-home) .row > .col-1-xlarge {
+					width: 8.33333%;
+				}
+
+				:where(app-home) .row > .off-1-xlarge {
+					margin-left: 8.33333%;
+				}
+
+				:where(app-home) .row > .col-2-xlarge {
+					width: 16.66667%;
+				}
+
+				:where(app-home) .row > .off-2-xlarge {
+					margin-left: 16.66667%;
+				}
+
+				:where(app-home) .row > .col-3-xlarge {
+					width: 25%;
+				}
+
+				:where(app-home) .row > .off-3-xlarge {
+					margin-left: 25%;
+				}
+
+				:where(app-home) .row > .col-4-xlarge {
+					width: 33.33333%;
+				}
+
+				:where(app-home) .row > .off-4-xlarge {
+					margin-left: 33.33333%;
+				}
+
+				:where(app-home) .row > .col-5-xlarge {
+					width: 41.66667%;
+				}
+
+				:where(app-home) .row > .off-5-xlarge {
+					margin-left: 41.66667%;
+				}
+
+				:where(app-home) .row > .col-6-xlarge {
+					width: 50%;
+				}
+
+				:where(app-home) .row > .off-6-xlarge {
+					margin-left: 50%;
+				}
+
+				:where(app-home) .row > .col-7-xlarge {
+					width: 58.33333%;
+				}
+
+				:where(app-home) .row > .off-7-xlarge {
+					margin-left: 58.33333%;
+				}
+
+				:where(app-home) .row > .col-8-xlarge {
+					width: 66.66667%;
+				}
+
+				:where(app-home) .row > .off-8-xlarge {
+					margin-left: 66.66667%;
+				}
+
+				:where(app-home) .row > .col-9-xlarge {
+					width: 75%;
+				}
+
+				:where(app-home) .row > .off-9-xlarge {
+					margin-left: 75%;
+				}
+
+				:where(app-home) .row > .col-10-xlarge {
+					width: 83.33333%;
+				}
+
+				:where(app-home) .row > .off-10-xlarge {
+					margin-left: 83.33333%;
+				}
+
+				:where(app-home) .row > .col-11-xlarge {
+					width: 91.66667%;
+				}
+
+				:where(app-home) .row > .off-11-xlarge {
+					margin-left: 91.66667%;
+				}
+
+				:where(app-home) .row > .col-12-xlarge {
+					width: 100%;
+				}
+
+				:where(app-home) .row > .off-12-xlarge {
+					margin-left: 100%;
+				}
+
+				:where(app-home) .row.gtr-0 {
+					margin-top: 0px;
+					margin-left: 0px;
+				}
+
+					:where(app-home) .row.gtr-0 > * {
+						padding: 0px 0 0 0px;
+					}
+
+					:where(app-home) .row.gtr-0.gtr-uniform {
+						margin-top: 0px;
+					}
+
+						:where(app-home) .row.gtr-0.gtr-uniform > * {
+							padding-top: 0px;
+						}
+
+				:where(app-home) .row.gtr-25 {
+					margin-top: -12.5px;
+					margin-left: -12.5px;
+				}
+
+					:where(app-home) .row.gtr-25 > * {
+						padding: 12.5px 0 0 12.5px;
+					}
+
+					:where(app-home) .row.gtr-25.gtr-uniform {
+						margin-top: -12.5px;
+					}
+
+						:where(app-home) .row.gtr-25.gtr-uniform > * {
+							padding-top: 12.5px;
+						}
+
+				:where(app-home) .row.gtr-50 {
+					margin-top: -25px;
+					margin-left: -25px;
+				}
+
+					:where(app-home) .row.gtr-50 > * {
+						padding: 25px 0 0 25px;
+					}
+
+					:where(app-home) .row.gtr-50.gtr-uniform {
+						margin-top: -25px;
+					}
+
+						:where(app-home) .row.gtr-50.gtr-uniform > * {
+							padding-top: 25px;
+						}
+
+				:where(app-home) .row {
+					margin-top: -50px;
+					margin-left: -50px;
+				}
+
+					:where(app-home) .row > * {
+						padding: 50px 0 0 50px;
+					}
+
+					:where(app-home) .row.gtr-uniform {
+						margin-top: -50px;
+					}
+
+						:where(app-home) .row.gtr-uniform > * {
+							padding-top: 50px;
+						}
+
+				:where(app-home) .row.gtr-150 {
+					margin-top: -75px;
+					margin-left: -75px;
+				}
+
+					:where(app-home) .row.gtr-150 > * {
+						padding: 75px 0 0 75px;
+					}
+
+					:where(app-home) .row.gtr-150.gtr-uniform {
+						margin-top: -75px;
+					}
+
+						:where(app-home) .row.gtr-150.gtr-uniform > * {
+							padding-top: 75px;
+						}
+
+				:where(app-home) .row.gtr-200 {
+					margin-top: -100px;
+					margin-left: -100px;
+				}
+
+					:where(app-home) .row.gtr-200 > * {
+						padding: 100px 0 0 100px;
+					}
+
+					:where(app-home) .row.gtr-200.gtr-uniform {
+						margin-top: -100px;
+					}
+
+						:where(app-home) .row.gtr-200.gtr-uniform > * {
+							padding-top: 100px;
+						}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			:where(app-home) .row {
+				display: flex;
+				flex-wrap: wrap;
+				box-sizing: border-box;
+				align-items: stretch;
+			}
+
+				:where(app-home) .row > * {
+					box-sizing: border-box;
+				}
+
+				:where(app-home) .row.gtr-uniform > * > :last-child {
+					margin-bottom: 0;
+				}
+
+				:where(app-home) .row.aln-left {
+					justify-content: flex-start;
+				}
+
+				:where(app-home) .row.aln-center {
+					justify-content: center;
+				}
+
+				:where(app-home) .row.aln-right {
+					justify-content: flex-end;
+				}
+
+				:where(app-home) .row.aln-top {
+					align-items: flex-start;
+				}
+
+				:where(app-home) .row.aln-middle {
+					align-items: center;
+				}
+
+				:where(app-home) .row.aln-bottom {
+					align-items: flex-end;
+				}
+
+				:where(app-home) .row > .imp-large {
+					order: -1;
+				}
+
+				:where(app-home) .row > .col-1-large {
+					width: 8.33333%;
+				}
+
+				:where(app-home) .row > .off-1-large {
+					margin-left: 8.33333%;
+				}
+
+				:where(app-home) .row > .col-2-large {
+					width: 16.66667%;
+				}
+
+				:where(app-home) .row > .off-2-large {
+					margin-left: 16.66667%;
+				}
+
+				:where(app-home) .row > .col-3-large {
+					width: 25%;
+				}
+
+				:where(app-home) .row > .off-3-large {
+					margin-left: 25%;
+				}
+
+				:where(app-home) .row > .col-4-large {
+					width: 33.33333%;
+				}
+
+				:where(app-home) .row > .off-4-large {
+					margin-left: 33.33333%;
+				}
+
+				:where(app-home) .row > .col-5-large {
+					width: 41.66667%;
+				}
+
+				:where(app-home) .row > .off-5-large {
+					margin-left: 41.66667%;
+				}
+
+				:where(app-home) .row > .col-6-large {
+					width: 50%;
+				}
+
+				:where(app-home) .row > .off-6-large {
+					margin-left: 50%;
+				}
+
+				:where(app-home) .row > .col-7-large {
+					width: 58.33333%;
+				}
+
+				:where(app-home) .row > .off-7-large {
+					margin-left: 58.33333%;
+				}
+
+				:where(app-home) .row > .col-8-large {
+					width: 66.66667%;
+				}
+
+				:where(app-home) .row > .off-8-large {
+					margin-left: 66.66667%;
+				}
+
+				:where(app-home) .row > .col-9-large {
+					width: 75%;
+				}
+
+				:where(app-home) .row > .off-9-large {
+					margin-left: 75%;
+				}
+
+				:where(app-home) .row > .col-10-large {
+					width: 83.33333%;
+				}
+
+				:where(app-home) .row > .off-10-large {
+					margin-left: 83.33333%;
+				}
+
+				:where(app-home) .row > .col-11-large {
+					width: 91.66667%;
+				}
+
+				:where(app-home) .row > .off-11-large {
+					margin-left: 91.66667%;
+				}
+
+				:where(app-home) .row > .col-12-large {
+					width: 100%;
+				}
+
+				:where(app-home) .row > .off-12-large {
+					margin-left: 100%;
+				}
+
+				:where(app-home) .row.gtr-0 {
+					margin-top: 0px;
+					margin-left: 0px;
+				}
+
+					:where(app-home) .row.gtr-0 > * {
+						padding: 0px 0 0 0px;
+					}
+
+					:where(app-home) .row.gtr-0.gtr-uniform {
+						margin-top: 0px;
+					}
+
+						:where(app-home) .row.gtr-0.gtr-uniform > * {
+							padding-top: 0px;
+						}
+
+				:where(app-home) .row.gtr-25 {
+					margin-top: -7.5px;
+					margin-left: -7.5px;
+				}
+
+					:where(app-home) .row.gtr-25 > * {
+						padding: 7.5px 0 0 7.5px;
+					}
+
+					:where(app-home) .row.gtr-25.gtr-uniform {
+						margin-top: -7.5px;
+					}
+
+						:where(app-home) .row.gtr-25.gtr-uniform > * {
+							padding-top: 7.5px;
+						}
+
+				:where(app-home) .row.gtr-50 {
+					margin-top: -15px;
+					margin-left: -15px;
+				}
+
+					:where(app-home) .row.gtr-50 > * {
+						padding: 15px 0 0 15px;
+					}
+
+					:where(app-home) .row.gtr-50.gtr-uniform {
+						margin-top: -15px;
+					}
+
+						:where(app-home) .row.gtr-50.gtr-uniform > * {
+							padding-top: 15px;
+						}
+
+				:where(app-home) .row {
+					margin-top: -30px;
+					margin-left: -30px;
+				}
+
+					:where(app-home) .row > * {
+						padding: 30px 0 0 30px;
+					}
+
+					:where(app-home) .row.gtr-uniform {
+						margin-top: -30px;
+					}
+
+						:where(app-home) .row.gtr-uniform > * {
+							padding-top: 30px;
+						}
+
+				:where(app-home) .row.gtr-150 {
+					margin-top: -45px;
+					margin-left: -45px;
+				}
+
+					:where(app-home) .row.gtr-150 > * {
+						padding: 45px 0 0 45px;
+					}
+
+					:where(app-home) .row.gtr-150.gtr-uniform {
+						margin-top: -45px;
+					}
+
+						:where(app-home) .row.gtr-150.gtr-uniform > * {
+							padding-top: 45px;
+						}
+
+				:where(app-home) .row.gtr-200 {
+					margin-top: -60px;
+					margin-left: -60px;
+				}
+
+					:where(app-home) .row.gtr-200 > * {
+						padding: 60px 0 0 60px;
+					}
+
+					:where(app-home) .row.gtr-200.gtr-uniform {
+						margin-top: -60px;
+					}
+
+						:where(app-home) .row.gtr-200.gtr-uniform > * {
+							padding-top: 60px;
+						}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			:where(app-home) .row {
+				display: flex;
+				flex-wrap: wrap;
+				box-sizing: border-box;
+				align-items: stretch;
+			}
+
+				:where(app-home) .row > * {
+					box-sizing: border-box;
+				}
+
+				:where(app-home) .row.gtr-uniform > * > :last-child {
+					margin-bottom: 0;
+				}
+
+				:where(app-home) .row.aln-left {
+					justify-content: flex-start;
+				}
+
+				:where(app-home) .row.aln-center {
+					justify-content: center;
+				}
+
+				:where(app-home) .row.aln-right {
+					justify-content: flex-end;
+				}
+
+				:where(app-home) .row.aln-top {
+					align-items: flex-start;
+				}
+
+				:where(app-home) .row.aln-middle {
+					align-items: center;
+				}
+
+				:where(app-home) .row.aln-bottom {
+					align-items: flex-end;
+				}
+
+				:where(app-home) .row > .imp-medium {
+					order: -1;
+				}
+
+				:where(app-home) .row > .col-1-medium {
+					width: 8.33333%;
+				}
+
+				:where(app-home) .row > .off-1-medium {
+					margin-left: 8.33333%;
+				}
+
+				:where(app-home) .row > .col-2-medium {
+					width: 16.66667%;
+				}
+
+				:where(app-home) .row > .off-2-medium {
+					margin-left: 16.66667%;
+				}
+
+				:where(app-home) .row > .col-3-medium {
+					width: 25%;
+				}
+
+				:where(app-home) .row > .off-3-medium {
+					margin-left: 25%;
+				}
+
+				:where(app-home) .row > .col-4-medium {
+					width: 33.33333%;
+				}
+
+				:where(app-home) .row > .off-4-medium {
+					margin-left: 33.33333%;
+				}
+
+				:where(app-home) .row > .col-5-medium {
+					width: 41.66667%;
+				}
+
+				:where(app-home) .row > .off-5-medium {
+					margin-left: 41.66667%;
+				}
+
+				:where(app-home) .row > .col-6-medium {
+					width: 50%;
+				}
+
+				:where(app-home) .row > .off-6-medium {
+					margin-left: 50%;
+				}
+
+				:where(app-home) .row > .col-7-medium {
+					width: 58.33333%;
+				}
+
+				:where(app-home) .row > .off-7-medium {
+					margin-left: 58.33333%;
+				}
+
+				:where(app-home) .row > .col-8-medium {
+					width: 66.66667%;
+				}
+
+				:where(app-home) .row > .off-8-medium {
+					margin-left: 66.66667%;
+				}
+
+				:where(app-home) .row > .col-9-medium {
+					width: 75%;
+				}
+
+				:where(app-home) .row > .off-9-medium {
+					margin-left: 75%;
+				}
+
+				:where(app-home) .row > .col-10-medium {
+					width: 83.33333%;
+				}
+
+				:where(app-home) .row > .off-10-medium {
+					margin-left: 83.33333%;
+				}
+
+				:where(app-home) .row > .col-11-medium {
+					width: 91.66667%;
+				}
+
+				:where(app-home) .row > .off-11-medium {
+					margin-left: 91.66667%;
+				}
+
+				:where(app-home) .row > .col-12-medium {
+					width: 100%;
+				}
+
+				:where(app-home) .row > .off-12-medium {
+					margin-left: 100%;
+				}
+
+				:where(app-home) .row.gtr-0 {
+					margin-top: 0px;
+					margin-left: 0px;
+				}
+
+					:where(app-home) .row.gtr-0 > * {
+						padding: 0px 0 0 0px;
+					}
+
+					:where(app-home) .row.gtr-0.gtr-uniform {
+						margin-top: 0px;
+					}
+
+						:where(app-home) .row.gtr-0.gtr-uniform > * {
+							padding-top: 0px;
+						}
+
+				:where(app-home) .row.gtr-25 {
+					margin-top: -10px;
+					margin-left: -10px;
+				}
+
+					:where(app-home) .row.gtr-25 > * {
+						padding: 10px 0 0 10px;
+					}
+
+					:where(app-home) .row.gtr-25.gtr-uniform {
+						margin-top: -10px;
+					}
+
+						:where(app-home) .row.gtr-25.gtr-uniform > * {
+							padding-top: 10px;
+						}
+
+				:where(app-home) .row.gtr-50 {
+					margin-top: -20px;
+					margin-left: -20px;
+				}
+
+					:where(app-home) .row.gtr-50 > * {
+						padding: 20px 0 0 20px;
+					}
+
+					:where(app-home) .row.gtr-50.gtr-uniform {
+						margin-top: -20px;
+					}
+
+						:where(app-home) .row.gtr-50.gtr-uniform > * {
+							padding-top: 20px;
+						}
+
+				:where(app-home) .row {
+					margin-top: -40px;
+					margin-left: -40px;
+				}
+
+					:where(app-home) .row > * {
+						padding: 40px 0 0 40px;
+					}
+
+					:where(app-home) .row.gtr-uniform {
+						margin-top: -40px;
+					}
+
+						:where(app-home) .row.gtr-uniform > * {
+							padding-top: 40px;
+						}
+
+				:where(app-home) .row.gtr-150 {
+					margin-top: -60px;
+					margin-left: -60px;
+				}
+
+					:where(app-home) .row.gtr-150 > * {
+						padding: 60px 0 0 60px;
+					}
+
+					:where(app-home) .row.gtr-150.gtr-uniform {
+						margin-top: -60px;
+					}
+
+						:where(app-home) .row.gtr-150.gtr-uniform > * {
+							padding-top: 60px;
+						}
+
+				:where(app-home) .row.gtr-200 {
+					margin-top: -80px;
+					margin-left: -80px;
+				}
+
+					:where(app-home) .row.gtr-200 > * {
+						padding: 80px 0 0 80px;
+					}
+
+					:where(app-home) .row.gtr-200.gtr-uniform {
+						margin-top: -80px;
+					}
+
+						:where(app-home) .row.gtr-200.gtr-uniform > * {
+							padding-top: 80px;
+						}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			:where(app-home) .row {
+				display: flex;
+				flex-wrap: wrap;
+				box-sizing: border-box;
+				align-items: stretch;
+			}
+
+				:where(app-home) .row > * {
+					box-sizing: border-box;
+				}
+
+				:where(app-home) .row.gtr-uniform > * > :last-child {
+					margin-bottom: 0;
+				}
+
+				:where(app-home) .row.aln-left {
+					justify-content: flex-start;
+				}
+
+				:where(app-home) .row.aln-center {
+					justify-content: center;
+				}
+
+				:where(app-home) .row.aln-right {
+					justify-content: flex-end;
+				}
+
+				:where(app-home) .row.aln-top {
+					align-items: flex-start;
+				}
+
+				:where(app-home) .row.aln-middle {
+					align-items: center;
+				}
+
+				:where(app-home) .row.aln-bottom {
+					align-items: flex-end;
+				}
+
+				:where(app-home) .row > .imp-small {
+					order: -1;
+				}
+
+				:where(app-home) .row > .col-1-small {
+					width: 8.33333%;
+				}
+
+				:where(app-home) .row > .off-1-small {
+					margin-left: 8.33333%;
+				}
+
+				:where(app-home) .row > .col-2-small {
+					width: 16.66667%;
+				}
+
+				:where(app-home) .row > .off-2-small {
+					margin-left: 16.66667%;
+				}
+
+				:where(app-home) .row > .col-3-small {
+					width: 25%;
+				}
+
+				:where(app-home) .row > .off-3-small {
+					margin-left: 25%;
+				}
+
+				:where(app-home) .row > .col-4-small {
+					width: 33.33333%;
+				}
+
+				:where(app-home) .row > .off-4-small {
+					margin-left: 33.33333%;
+				}
+
+				:where(app-home) .row > .col-5-small {
+					width: 41.66667%;
+				}
+
+				:where(app-home) .row > .off-5-small {
+					margin-left: 41.66667%;
+				}
+
+				:where(app-home) .row > .col-6-small {
+					width: 50%;
+				}
+
+				:where(app-home) .row > .off-6-small {
+					margin-left: 50%;
+				}
+
+				:where(app-home) .row > .col-7-small {
+					width: 58.33333%;
+				}
+
+				:where(app-home) .row > .off-7-small {
+					margin-left: 58.33333%;
+				}
+
+				:where(app-home) .row > .col-8-small {
+					width: 66.66667%;
+				}
+
+				:where(app-home) .row > .off-8-small {
+					margin-left: 66.66667%;
+				}
+
+				:where(app-home) .row > .col-9-small {
+					width: 75%;
+				}
+
+				:where(app-home) .row > .off-9-small {
+					margin-left: 75%;
+				}
+
+				:where(app-home) .row > .col-10-small {
+					width: 83.33333%;
+				}
+
+				:where(app-home) .row > .off-10-small {
+					margin-left: 83.33333%;
+				}
+
+				:where(app-home) .row > .col-11-small {
+					width: 91.66667%;
+				}
+
+				:where(app-home) .row > .off-11-small {
+					margin-left: 91.66667%;
+				}
+
+				:where(app-home) .row > .col-12-small {
+					width: 100%;
+				}
+
+				:where(app-home) .row > .off-12-small {
+					margin-left: 100%;
+				}
+
+				:where(app-home) .row.gtr-0 {
+					margin-top: 0px;
+					margin-left: 0px;
+				}
+
+					:where(app-home) .row.gtr-0 > * {
+						padding: 0px 0 0 0px;
+					}
+
+					:where(app-home) .row.gtr-0.gtr-uniform {
+						margin-top: 0px;
+					}
+
+						:where(app-home) .row.gtr-0.gtr-uniform > * {
+							padding-top: 0px;
+						}
+
+				:where(app-home) .row.gtr-25 {
+					margin-top: -5px;
+					margin-left: -5px;
+				}
+
+					:where(app-home) .row.gtr-25 > * {
+						padding: 5px 0 0 5px;
+					}
+
+					:where(app-home) .row.gtr-25.gtr-uniform {
+						margin-top: -5px;
+					}
+
+						:where(app-home) .row.gtr-25.gtr-uniform > * {
+							padding-top: 5px;
+						}
+
+				:where(app-home) .row.gtr-50 {
+					margin-top: -10px;
+					margin-left: -10px;
+				}
+
+					:where(app-home) .row.gtr-50 > * {
+						padding: 10px 0 0 10px;
+					}
+
+					:where(app-home) .row.gtr-50.gtr-uniform {
+						margin-top: -10px;
+					}
+
+						:where(app-home) .row.gtr-50.gtr-uniform > * {
+							padding-top: 10px;
+						}
+
+				:where(app-home) .row {
+					margin-top: -20px;
+					margin-left: -20px;
+				}
+
+					:where(app-home) .row > * {
+						padding: 20px 0 0 20px;
+					}
+
+					:where(app-home) .row.gtr-uniform {
+						margin-top: -20px;
+					}
+
+						:where(app-home) .row.gtr-uniform > * {
+							padding-top: 20px;
+						}
+
+				:where(app-home) .row.gtr-150 {
+					margin-top: -30px;
+					margin-left: -30px;
+				}
+
+					:where(app-home) .row.gtr-150 > * {
+						padding: 30px 0 0 30px;
+					}
+
+					:where(app-home) .row.gtr-150.gtr-uniform {
+						margin-top: -30px;
+					}
+
+						:where(app-home) .row.gtr-150.gtr-uniform > * {
+							padding-top: 30px;
+						}
+
+				:where(app-home) .row.gtr-200 {
+					margin-top: -40px;
+					margin-left: -40px;
+				}
+
+					:where(app-home) .row.gtr-200 > * {
+						padding: 40px 0 0 40px;
+					}
+
+					:where(app-home) .row.gtr-200.gtr-uniform {
+						margin-top: -40px;
+					}
+
+						:where(app-home) .row.gtr-200.gtr-uniform > * {
+							padding-top: 40px;
+						}
+
+		}
+
+/* Form */
+
+	:where(app-home) form label {
+		display: block;
+		color: #252122;
+		font-weight: 400;
+		margin: 0 0 0.5em 0;
+	}
+
+	:where(app-home) form input[type=text],
+:where(app-home) form input[type=email],
+:where(app-home) form input[type=password],
+:where(app-home) form select,
+:where(app-home) form textarea {
+		-webkit-appearance: none;
+		display: block;
+		border: 0;
+		padding: 0.75em 1em;
+		font-size: 1em;
+		border-radius: 5px;
+		border: solid 1px #dddddd;
+		background: #fff;
+		width: 100%;
+	}
+
+		:where(app-home) form input[type=text]:focus,
+:where(app-home) form input[type=email]:focus,
+:where(app-home) form input[type=password]:focus,
+:where(app-home) form select:focus,
+:where(app-home) form textarea:focus {
+			box-shadow: inset 0px 0px 1px 1px #43bff0;
+		}
+
+	:where(app-home) form textarea {
+		height: 15em;
+	}
+
+	:where(app-home) form ::-webkit-input-placeholder {
+		color: #555 !important;
+	}
+
+	:where(app-home) form :-moz-placeholder {
+		color: #555 !important;
+	}
+
+	:where(app-home) form ::-moz-placeholder {
+		color: #555 !important;
+	}
+
+	:where(app-home) form :-ms-input-placeholder {
+		color: #555 !important;
+	}
+
+	:where(app-home) form ::-moz-focus-inner {
+		border: 0;
+	}
+
+/* Tables */
+
+	:where(app-home) table {
+		width: 100%;
+	}
+
+		:where(app-home) table tr {
+			border-top: solid 1px #dddddd;
+		}
+
+			:where(app-home) table tr:first-child {
+				border-top: 0;
+			}
+
+		:where(app-home) table td {
+			padding: 0.5em 1em 0.5em 1em;
+		}
+
+		:where(app-home) table th {
+			text-align: left;
+			padding: 0.5em 1em 0.5em 1em;
+			font-weight: 700;
+			margin: 0 0 1em 0;
+		}
+
+		:where(app-home) table thead {
+			border-bottom: solid 2px #dddddd;
+		}
+
+/* Section/Article */
+
+	:where(app-home) section,
+:where(app-home) article {
+		margin-bottom: 2.5em;
+	}
+
+		:where(app-home) section > :last-child,
+:where(app-home) section:last-child,
+:where(app-home) article > :last-child,
+:where(app-home) article:last-child {
+			margin-bottom: 0;
+		}
+
+	:where(app-home) header {
+		margin: 0 0 1.5em 0;
+	}
+
+		:where(app-home) header > p {
+			display: block;
+			font-style: italic;
+			margin: 0.5em 0 0 0;
+			padding-bottom: 0.5em;
+		}
+
+		:where(app-home) header.major {
+			position: relative;
+			text-align: center;
+			border-top: solid 1px #ccc;
+			top: 1em;
+			margin: 0 0 3em 0;
+		}
+
+			:where(app-home) header.major h2 {
+				background: #fff;
+				position: relative;
+				top: -0.65em;
+				display: inline;
+				margin: 0;
+				padding: 0 1em 0 1em;
+			}
+
+	:where(app-home) footer {
+		margin: 2.25em 0 0 0;
+	}
+
+/* Box */
+
+	:where(app-home) .box {
+		background: #ffffff;
+		border-bottom: solid 1px #ccc;
+		padding: 2.75em 1.75em 2.75em 1.75em;
+	}
+
+		:where(app-home) .box .image.featured {
+			position: relative;
+			width: auto;
+			left: 1.75em;
+			top: 1.75em;
+			margin: -4.5em 0 4.25em -3.5em;
+		}
+
+		:where(app-home) .box.post header {
+			padding-top: 1em;
+			margin: 0 0 2em 0;
+		}
+
+		:where(app-home) .box.post h2 {
+			font-size: 2.5em;
+			letter-spacing: -0.015em;
+		}
+
+		:where(app-home) .box.post header > p {
+			margin-top: 1.25em;
+			font-size: 1.25em;
+		}
+
+		:where(app-home) .box footer ul.actions {
+			margin-bottom: 0;
+		}
+
+/* Button */
+
+	:where(app-home) input[type="button"],
+:where(app-home) input[type="submit"],
+:where(app-home) input[type="reset"],
+:where(app-home) button,
+:where(app-home) .button {
+		-webkit-appearance: none;
+		display: inline-block;
+		text-decoration: none;
+		cursor: pointer;
+		border: 0;
+		border-radius: 5px;
+		background: #E31E24;
+		color: #fff !important;
+		font-weight: 700;
+		outline: 0;
+		font-size: 1.1em;
+		padding: 0.65em 1.5em 0.65em 1.5em;
+		text-align: center;
+		-moz-transition: background-color .25s ease-in-out;
+		-webkit-transition: background-color .25s ease-in-out;
+		-ms-transition: background-color .25s ease-in-out;
+		transition: background-color .25s ease-in-out;
+	}
+
+		:where(app-home) input[type="button"]:hover,
+:where(app-home) input[type="submit"]:hover,
+:where(app-home) input[type="reset"]:hover,
+:where(app-home) button:hover,
+:where(app-home) .button:hover {
+			background: #e53359;
+		}
+
+		:where(app-home) input[type="button"]:active,
+:where(app-home) input[type="submit"]:active,
+:where(app-home) input[type="reset"]:active,
+:where(app-home) button:active,
+:where(app-home) .button:active {
+			background: #c51349;
+		}
+
+		:where(app-home) input[type="button"].alt,
+:where(app-home) input[type="submit"].alt,
+:where(app-home) input[type="reset"].alt,
+:where(app-home) button.alt,
+:where(app-home) .button.alt {
+			background: #252122;
+		}
+
+			:where(app-home) input[type="button"].alt:hover,
+:where(app-home) input[type="submit"].alt:hover,
+:where(app-home) input[type="reset"].alt:hover,
+:where(app-home) button.alt:hover,
+:where(app-home) .button.alt:hover {
+				background: #353132;
+			}
+
+			:where(app-home) input[type="button"].alt:active,
+:where(app-home) input[type="submit"].alt:active,
+:where(app-home) input[type="reset"].alt:active,
+:where(app-home) button.alt:active,
+:where(app-home) .button.alt:active {
+				background: #151112;
+			}
+
+		:where(app-home) input[type="button"].icon:before,
+:where(app-home) input[type="submit"].icon:before,
+:where(app-home) input[type="reset"].icon:before,
+:where(app-home) button.icon:before,
+:where(app-home) .button.icon:before {
+			opacity: 0.35;
+			position: relative;
+			top: 0.05em;
+			margin-right: 0.75em;
+		}
+
+		:where(app-home) input[type="button"].large,
+:where(app-home) input[type="submit"].large,
+:where(app-home) input[type="reset"].large,
+:where(app-home) button.large,
+:where(app-home) .button.large {
+			font-size: 1.5em;
+			padding: 0.75em 1.5em 0.75em 1.5em;
+		}
+
+/* Image */
+
+	:where(app-home) .image {
+		display: inline-block;
+		outline: 0;
+	}
+
+		:where(app-home) .image img {
+			display: block;
+			width: 100%;
+		}
+
+		:where(app-home) .image.centered {
+			display: block;
+			margin: 0 0 2em 0;
+		}
+
+			:where(app-home) .image.centered img {
+				margin: 0 auto;
+				width: auto;
+			}
+
+		:where(app-home) .image.featured {
+			display: block;
+			width: 100%;
+			margin: 0 0 2em 0;
+		}
+
+		:where(app-home) .image.left {
+			float: left;
+			margin: 0 2em 2em 0;
+		}
+
+/* List */
+
+	:where(app-home) ul {
+		list-style: disc;
+		padding-left: 1em;
+	}
+
+		:where(app-home) ul li {
+			padding-left: 0.5em;
+		}
+
+	:where(app-home) ol {
+		list-style: decimal;
+		padding-left: 1.25em;
+	}
+
+		:where(app-home) ol li {
+			padding-left: 0.25em;
+		}
+
+/* Actions */
+
+	:where(app-home) ul.actions {
+		list-style: none;
+		padding-left: 0;
+	}
+
+		:where(app-home) ul.actions li {
+			display: inline-block;
+			margin-left: 1em;
+			padding-left: 0;
+		}
+
+			:where(app-home) ul.actions li:first-child {
+				margin-left: 0;
+			}
+
+/* Links */
+
+	:where(app-home) ul.links {
+		list-style: none;
+		padding-left: 0;
+	}
+
+		:where(app-home) ul.links li {
+			display: inline-block;
+			border-left: solid 1px rgba(255, 255, 255, 0.05);
+			padding: 0 0 0 1em;
+			margin: 0 0 0 1em;
+		}
+
+			:where(app-home) ul.links li:first-child {
+				border-left: 0;
+				padding-left: 0;
+				margin-left: 0;
+			}
+
+/* Contact */
+
+	:where(app-home) ul.contact {
+		list-style: none;
+		padding-left: 0;
+	}
+
+		:where(app-home) ul.contact li {
+			position: relative;
+			border-top: solid 1px #ddd;
+			padding: 1.3em 0 1.3em 7em;
+		}
+
+			:where(app-home) ul.contact li h3 {
+				position: absolute;
+				left: 0;
+				top: 1.3em;
+				font-size: 1.1em;
+			}
+
+			:where(app-home) ul.contact li p {
+				margin: 0;
+			}
+
+			:where(app-home) ul.contact li:first-child {
+				padding-top: 0;
+				border-top: 0;
+			}
+
+				:where(app-home) ul.contact li:first-child h3 {
+					top: 0;
+				}
+
+/* Dates */
+
+	:where(app-home) ul.dates {
+		list-style: none;
+		padding-left: 0;
+	}
+
+		:where(app-home) ul.dates li {
+			position: relative;
+			border-top: solid 1px #ddd;
+			padding: 1.3em 0 1.3em 6.75em;
+		}
+
+		:where(app-home) ul.dates .date {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 1.3em;
+			background-color: #E31E24;
+			height: 3.5em;
+			text-align: center;
+			color: #fff;
+			line-height: 1em;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			padding: 0.5em 0.75em 0 1em;
+		}
+
+			:where(app-home) ul.dates .date:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				right: -1.2em;
+				border-left: solid 1.25em #E31E24;
+				border-top: solid 1.8em transparent;
+				border-bottom: solid 1.8em transparent;
+			}
+
+			:where(app-home) ul.dates .date strong {
+				display: block;
+				font-size: 1.75em;
+				padding-top: 0.15em;
+			}
+
+		:where(app-home) ul.dates h3 {
+			font-size: 1.1em;
+		}
+
+		:where(app-home) ul.dates p {
+			margin: 0;
+		}
+
+		:where(app-home) ul.dates li:first-child {
+			border-top: 0;
+			padding-top: 0;
+		}
+
+			:where(app-home) ul.dates li:first-child .date {
+				top: 0;
+			}
+
+/* Divided */
+
+	:where(app-home) ul.divided {
+		list-style: none;
+		padding-left: 0;
+	}
+
+		:where(app-home) ul.divided li {
+			border-top: solid 1px #ddd;
+			padding: 1em 0 1em 0;
+		}
+
+			:where(app-home) ul.divided li:first-child {
+				border-top: 0;
+				padding-top: 0;
+			}
+
+/* Social */
+
+	:where(app-home) ul.social {
+		list-style: none;
+		padding-left: 0;
+		overflow: hidden;
+		cursor: default;
+		margin: 0 0 3.25em 0;
+	}
+
+		:where(app-home) ul.social li {
+			display: inline-block;
+			padding-left: 0;
+			margin-left: 0.75em;
+		}
+
+			:where(app-home) ul.social li:first-child {
+				margin-left: 0;
+			}
+
+			:where(app-home) ul.social li a {
+				display: inline-block;
+				width: 3em;
+				height: 3em;
+				text-align: center;
+				border-radius: 5px;
+				background: #888;
+				-moz-transition: background-color .25s ease-in-out;
+				-webkit-transition: background-color .25s ease-in-out;
+				-ms-transition: background-color .25s ease-in-out;
+				transition: background-color .25s ease-in-out;
+			}
+
+				:where(app-home) ul.social li a:before {
+					color: #fff;
+					font-size: 2em;
+					line-height: 1.5em;
+				}
+
+				:where(app-home) ul.social li a.fa-facebook {
+					background: #3c5a98;
+				}
+
+					:where(app-home) ul.social li a.fa-facebook:hover {
+						background: #4c6aa8;
+					}
+
+				:where(app-home) ul.social li a.fa-twitter {
+					background: #2daae4;
+				}
+
+					:where(app-home) ul.social li a.fa-twitter:hover {
+						background: #3dbaf4;
+					}
+
+				:where(app-home) ul.social li a.fa-dribbble {
+					background: #c4376b;
+				}
+
+					:where(app-home) ul.social li a.fa-dribbble:hover {
+						background: #d4477b;
+					}
+
+				:where(app-home) ul.social li a.fa-linkedin {
+					background: #006599;
+				}
+
+					:where(app-home) ul.social li a.fa-linkedin:hover {
+						background: #1075a9;
+					}
+
+				:where(app-home) ul.social li a.fa-tumblr {
+					background: #2b4661;
+				}
+
+					:where(app-home) ul.social li a.fa-tumblr:hover {
+						background: #3b5671;
+					}
+
+				:where(app-home) ul.social li a.fa-google-plus {
+					background: #da2713;
+				}
+
+					:where(app-home) ul.social li a.fa-google-plus:hover {
+						background: #ea3723;
+					}
+
+/* Icons */
+
+	:where(app-home) .icon {
+		text-decoration: none;
+		position: relative;
+		text-decoration: none;
+	}
+
+		:where(app-home) .icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			text-transform: none !important;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 400;
+		}
+
+		:where(app-home) .icon.solid:before {
+			font-weight: 900;
+		}
+
+		:where(app-home) .icon.brands:before {
+			font-family: 'Font Awesome 5 Brands';
+		}
+
+		:where(app-home) .icon:before {
+			line-height: inherit;
+		}
+
+		:where(app-home) .icon > .label {
+			display: none;
+		}
+
+		:where(app-home) .icon.featured {
+			position: relative;
+			display: inline-block;
+			background-color: #E31E24;
+			width: 9em;
+			padding: 1.75em 0 0.75em 0;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			margin: 0 0 4.5em 0;
+			cursor: default;
+		}
+
+			:where(app-home) .icon.featured:before {
+				font-size: 4.5em;
+				line-height: 1em;
+				color: #fff;
+			}
+
+			:where(app-home) .icon.featured:after {
+				content: '';
+				position: absolute;
+				bottom: -1.95em;
+				left: 0;
+				border-top: solid 2em #E31E24;
+				border-left: solid 4.5em transparent;
+				border-right: solid 4.5em transparent;
+			}
+
+			:where(app-home) .icon.featured.alt {
+				background-color: #252122;
+			}
+
+				:where(app-home) .icon.featured.alt:after {
+					border-top-color: #252122;
+				}
+
+			:where(app-home) .icon.featured.alt2 {
+				background-color: #827a7c;
+			}
+
+				:where(app-home) .icon.featured.alt2:after {
+					border-top-color: #827a7c;
+				}
+
+/* Page Wrapper */
+
+	:where(app-home) #page-wrapper > section {
+		margin-bottom: 0;
+	}
+
+/* Header */
+
+	:where(app-home) #header {
+		position: relative;
+		background: #ffffff;
+		border-bottom: solid 1px #ccc;
+		padding: 4em 0 4em 0;
+		text-align: center;
+	}
+
+		:where(app-home) #header h1 {
+			color: #252122;
+			font-weight: 900;
+			font-size: 2.5em;
+			letter-spacing: -0.035em;
+			line-height: 1;
+		}
+
+/* Nav */
+
+	:where(app-home) #nav {
+		margin: 2.5em 0 0 0;
+	}
+
+		:where(app-home) #nav > ul {
+			margin: 0;
+		}
+
+			:where(app-home) #nav > ul > li {
+				display: inline-block;
+				font-style: italic;
+				margin: 0 0.35em 0 0.35em;
+			}
+
+				:where(app-home) #nav > ul > li > ul {
+					display: none;
+				}
+
+				:where(app-home) #nav > ul > li > a {
+					border-radius: 5px;
+					color: #5d5d5d;
+					text-decoration: none;
+					padding: 0.6em 1.2em 0.6em 1.2em;
+					-moz-transition: background-color .25s ease-in-out;
+					-webkit-transition: background-color .25s ease-in-out;
+					-ms-transition: background-color .25s ease-in-out;
+					transition: background-color .25s ease-in-out;
+					outline: 0;
+				}
+
+				:where(app-home) #nav > ul > li:hover > a,
+:where(app-home) #nav > ul > li.active > a {
+          color: #fff !important;
+					background: #E31E24;
+				}
+
+				:where(app-home) #nav > ul > li.current > a {
+					background: #E31E24;
+					color: #fff !important;
+					font-weight: 700;
+				}
+
+	:where(app-home) .dropotron {
+		border-radius: 5px;
+		background-color: #252122;
+		background-color: rgba(34, 30, 31, 0.98);
+		padding: 1.25em 1.5em 1.25em 1.5em;
+		font-style: italic;
+		min-width: 13em;
+		box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
+		text-align: left;
+		margin-top: -1.25em;
+		margin-left: -1px;
+		list-style: none;
+	}
+
+		:where(app-home) .dropotron a,
+:where(app-home) .dropotron span {
+			color: #aaa;
+			text-decoration: none;
+			-moz-transition: color .25s ease-in-out;
+			-webkit-transition: color .25s ease-in-out;
+			-ms-transition: color .25s ease-in-out;
+			transition: color .25s ease-in-out;
+		}
+
+		:where(app-home) .dropotron li {
+			padding: 0.25em 0 0.25em 0;
+		}
+
+			:where(app-home) .dropotron li:hover > a,
+:where(app-home) .dropotron li:hover > span {
+				color: #fff;
+			}
+
+		:where(app-home) .dropotron.level-0 {
+			margin-top: 2em;
+		}
+
+			:where(app-home) .dropotron.level-0:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				margin-left: -10px;
+				top: -9px;
+				border-left: solid 10px transparent;
+				border-right: solid 10px transparent;
+				border-bottom: solid 10px #252122;
+				border-bottom-color: rgba(34, 30, 31, 0.98);
+			}
+
+/* Banner */
+
+	:where(app-home) #banner {
+		/* background: #CCE8F4 url("/assets/images/banner_03.jpg"); */
+		background-position: center center;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		text-align: center;
+		position: relative;
+		padding: 8em 0;
+		margin: 4em 0 0 0;
+	}
+
+		:where(app-home) #banner header {
+			background-color: rgba(34, 30, 31, 0.6);
+			display: inline-block;
+			padding: 2.5em 5em;
+			border-radius: 5px;
+		}
+
+			:where(app-home) #banner header h2 {
+				color: #fff;
+				font-weight: 700;
+				font-size: 2.5em;
+				margin: 0 0 0.65em 0;
+			}
+
+			:where(app-home) #banner header p {
+				color: #ffeb3b;
+				padding: 0;
+				font-style: normal;
+				margin: 0;
+				font-size: 1.5em;
+			}
+
+/* Intro */
+
+	:where(app-home) #intro {
+		text-align: center;
+		overflow: hidden;
+	}
+
+		:where(app-home) #intro section {
+			margin: 3em 0;
+			padding: 2.5em 0;
+		}
+
+		:where(app-home) #intro h2 {
+			font-size: 1.75em;
+		}
+
+		:where(app-home) #intro p {
+			margin: 0;
+		}
+
+		:where(app-home) #intro .middle {
+			position: relative;
+			z-index: 1;
+		}
+
+			:where(app-home) #intro .middle:before {
+				content: '';
+				width: 32px;
+				height: 100%;
+				position: absolute;
+				left: -24px;
+				top: 0;
+				display: block;
+				z-index: -1;
+				box-shadow: 32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, 32px 32px 0 0 #fff, 32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
+			}
+
+			:where(app-home) #intro .middle:after {
+				content: '';
+				width: 32px;
+				height: 100%;
+				position: absolute;
+				right: -24px;
+				top: 0;
+				display: block;
+				z-index: -1;
+				box-shadow: -32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, -32px 32px 0 0 #fff, -32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
+			}
+
+		:where(app-home) #intro .button {
+			min-width: 12em;
+		}
+
+		:where(app-home) #intro footer {
+			margin: 0;
+		}
+
+/* Main */
+
+	:where(app-home) #main {
+		position: relative;
+		background: #f7f7f7 url("images/bg02.png");
+		padding: 4em 0 4em 0;
+	}
+
+		:where(app-home) #main:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: url("images/bg01.png");
+			background-size: 100% 100%;
+			z-index: 0;
+			opacity: 0.1;
+		}
+
+		:where(app-home) #main .major h2 {
+			background: #f7f7f7 url("images/bg02.png");
+		}
+
+/* Footer */
+
+	:where(app-home) #footer {
+		position: relative;
+		color: #858484;
+		padding: 4em 0;
+	}
+
+		:where(app-home) #footer:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: url("images/bg01.png");
+			background-size: 100% 100%;
+			z-index: 0;
+			opacity: 0.5;
+		}
+
+		:where(app-home) #footer a {
+			color: #c5c4c4;
+		}
+
+		:where(app-home) #footer h2,
+:where(app-home) #footer h3,
+:where(app-home) #footer h4,
+:where(app-home) #footer h5,
+:where(app-home) #footer h6,
+:where(app-home) #footer strong,
+:where(app-home) #footer b {
+			color: #fff;
+		}
+
+			:where(app-home) #footer h2 a,
+:where(app-home) #footer h3 a,
+:where(app-home) #footer h4 a,
+:where(app-home) #footer h5 a,
+:where(app-home) #footer h6 a,
+:where(app-home) #footer strong a,
+:where(app-home) #footer b a {
+				color: inherit;
+			}
+
+		:where(app-home) #footer ul.contact li,
+:where(app-home) #footer ul.dates li,
+:where(app-home) #footer ul.divided li {
+			border-top-color: #353434;
+			border-top-color: rgba(255, 255, 255, 0.05);
+		}
+
+		:where(app-home) #footer header {
+			margin: 0 0 3em 0;
+		}
+
+			:where(app-home) #footer header h2 {
+				font-size: 1.75em;
+			}
+
+/* Copyright */
+
+	:where(app-home) #copyright {
+		text-align: center;
+		margin: 3em 0 2em 0;
+	}
+
+		:where(app-home) #copyright ul.links {
+			display: inline-block;
+			background: #2C2929;
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 5px;
+			margin: 0;
+			padding: 0.85em 2.25em 0.85em 2.25em;
+		}
+
+/* XLarge */
+
+	@media screen and (max-width: 1680px) {
+
+		/* Basic */
+
+			:where(app-home) body,
+:where(app-home) input,
+:where(app-home) textarea,
+:where(app-home) select {
+				font-size: 12pt;
+			}
+
+	}
+
+/* Large */
+
+	@media screen and (max-width: 1280px) {
+
+		/* Basic */
+
+			:where(app-home) body,
+:where(app-home) input,
+:where(app-home) textarea,
+:where(app-home) select {
+				font-size: 11pt;
+			}
+
+		/* Section/Article */
+
+			:where(app-home) header.major {
+				margin: 0.75em 0 2.5em 0;
+			}
+
+				:where(app-home) header.major h2 {
+					padding: 0 1em 0 1em;
+				}
+
+		/* Social */
+
+			:where(app-home) ul.social li {
+				margin: 0 0 0.25em 0.75em;
+			}
+
+		/* Header */
+
+			:where(app-home) #header {
+				padding: 4em 0 3em 0;
+			}
+
+		/* Banner */
+
+			:where(app-home) #banner {
+				padding: 6em 0;
+				margin: 3em 0 0 0;
+			}
+
+		/* Intro */
+
+			:where(app-home) #intro {
+				padding: 0;
+			}
+
+				:where(app-home) #intro section {
+					padding: 1em 2em;
+				}
+
+				:where(app-home) #intro .middle:before {
+					left: -12px;
+				}
+
+				:where(app-home) #intro .middle:after {
+					right: -12px;
+				}
+
+		/* Main */
+
+			:where(app-home) #main {
+				padding: 30px 0;
+			}
+
+		/* Footer */
+
+			:where(app-home) #footer {
+				padding: 3em 0;
+			}
+
+				:where(app-home) #footer:before {
+					height: 2.5em;
+				}
+
+				:where(app-home) #footer header {
+					margin: 0 0 1.5em 0;
+				}
+
+					:where(app-home) #footer header h2 {
+						font-size: 1.25em;
+					}
+
+		/* Copyright */
+
+			:where(app-home) #copyright {
+				margin: 0;
+			}
+
+	}
+
+/* Medium */
+
+	:where(app-home) #navPanel,
+:where(app-home) #titleBar {
+		display: none;
+	}
+
+	@media screen and (max-width: 980px) {
+
+		/* Basic */
+
+			:where(app-home) html,
+:where(app-home) body {
+				overflow-x: hidden;
+			}
+
+		/* Box */
+
+			:where(app-home) .box footer ul.actions li {
+				margin: 1em 0 0 0;
+				display: block;
+			}
+
+				:where(app-home) .box footer ul.actions li .button {
+					width: 100%;
+				}
+
+				:where(app-home) .box footer ul.actions li:first-child {
+					margin-top: 0;
+				}
+
+		/* Header */
+
+			:where(app-home) #header {
+				padding: 3.5em 0 3em 0;
+			}
+
+		/* Nav */
+
+			:where(app-home) #nav {
+				display: none;
+			}
+
+		/* Intro */
+
+			:where(app-home) #intro {
+				padding: 3em 0 0 0;
+			}
+
+				:where(app-home) #intro section {
+					position: relative;
+					border-top: solid 1px #dfdfdf;
+					margin: 0;
+					padding: 40px 0 0 0;
+				}
+
+					:where(app-home) #intro section.first {
+						border-top: 0;
+						padding-top: 0;
+					}
+
+					:where(app-home) #intro section p {
+						margin: 0;
+					}
+
+				:where(app-home) #intro .middle:before,
+:where(app-home) #intro .middle:after {
+					display: none;
+				}
+
+				:where(app-home) #intro footer {
+					padding: 3em 0 0 0;
+				}
+
+					:where(app-home) #intro footer ul.actions {
+						margin-bottom: 0;
+					}
+
+		/* Main */
+
+			:where(app-home) #main {
+				padding: 40px 0;
+			}
+
+		/* Copyright */
+
+			:where(app-home) #copyright ul.links {
+				display: block;
+			}
+
+		/* Nav */
+
+			:where(app-home) #page-wrapper {
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				padding-bottom: 1px;
+			}
+
+			:where(app-home) #titleBar {
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				display: block;
+				height: 44px;
+				left: 0;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 10001;
+				background: none;
+			}
+
+				:where(app-home) #titleBar .toggle {
+					text-decoration: none;
+					width: 80px;
+					height: 60px;
+				}
+
+					:where(app-home) #titleBar .toggle:before {
+						-moz-osx-font-smoothing: grayscale;
+						-webkit-font-smoothing: antialiased;
+						display: inline-block;
+						font-style: normal;
+						font-variant: normal;
+						text-rendering: auto;
+						line-height: 1;
+						text-transform: none !important;
+						font-family: 'Font Awesome 5 Free';
+						font-weight: 900;
+					}
+
+					:where(app-home) #titleBar .toggle:before {
+						content: '\f0c9';
+						display: block;
+						position: absolute;
+						left: 10px;
+						top: 10px;
+						width: 50px;
+						height: 40px;
+						line-height: 40px;
+						font-size: 18px;
+						color: #fff;
+						text-align: center;
+						background: rgba(150, 150, 150, 0.75);
+						border-radius: 5px;
+					}
+
+					:where(app-home) #titleBar .toggle:active:before {
+						background-color: #969696;
+					}
+
+			:where(app-home) #navPanel {
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-moz-transform: translateX(-275px);
+				-webkit-transform: translateX(-275px);
+				-ms-transform: translateX(-275px);
+				transform: translateX(-275px);
+				-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				display: block;
+				height: 100%;
+				left: 0;
+				overflow-y: auto;
+				position: fixed;
+				top: 0;
+				width: 275px;
+				z-index: 10002;
+				color: #858484;
+				background-image: url("images/bg02.png");
+				box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
+			}
+
+				:where(app-home) #navPanel .link {
+					display: block;
+					color: #888;
+					text-decoration: none;
+					height: 44px;
+					line-height: 44px;
+					border-top: solid 1px rgba(255, 255, 255, 0.05);
+					padding: 0 1em 0 1em;
+					font-style: italic;
+				}
+
+					:where(app-home) #navPanel .link:first-child {
+						border-top: 0;
+					}
+
+				:where(app-home) #navPanel .indent-1 {
+					display: inline-block;
+					width: 1em;
+				}
+
+				:where(app-home) #navPanel .indent-2 {
+					display: inline-block;
+					width: 2em;
+				}
+
+				:where(app-home) #navPanel .indent-3 {
+					display: inline-block;
+					width: 3em;
+				}
+
+				:where(app-home) #navPanel .indent-4 {
+					display: inline-block;
+					width: 4em;
+				}
+
+				:where(app-home) #navPanel .indent-5 {
+					display: inline-block;
+					width: 5em;
+				}
+
+				:where(app-home) #navPanel .depth-0 {
+					color: #fff;
+				}
+
+			:where(app-home) body.navPanel-visible #page-wrapper {
+				-moz-transform: translateX(275px);
+				-webkit-transform: translateX(275px);
+				-ms-transform: translateX(275px);
+				transform: translateX(275px);
+			}
+
+			:where(app-home) body.navPanel-visible #titleBar {
+				-moz-transform: translateX(275px);
+				-webkit-transform: translateX(275px);
+				-ms-transform: translateX(275px);
+				transform: translateX(275px);
+			}
+
+			:where(app-home) body.navPanel-visible #navPanel {
+				-moz-transform: translateX(0);
+				-webkit-transform: translateX(0);
+				-ms-transform: translateX(0);
+				transform: translateX(0);
+			}
+
+	}
+
+/* Small */
+
+	@media screen and (max-width: 736px) {
+
+		/* Basic */
+
+			:where(app-home) body,
+:where(app-home) input,
+:where(app-home) textarea,
+:where(app-home) select {
+				font-size: 11pt;
+			}
+
+			:where(app-home) h2,
+:where(app-home) h3,
+:where(app-home) h4,
+:where(app-home) h5,
+:where(app-home) h6 {
+				font-size: 1.25em;
+			}
+
+		/* Button */
+
+			:where(app-home) input[type="button"].large,
+:where(app-home) input[type="submit"].large,
+:where(app-home) input[type="reset"].large,
+:where(app-home) button.large,
+:where(app-home) .button.large {
+				font-size: 1.1em;
+				padding: 0.65em 1.5em 0.65em 1.5em;
+			}
+
+		/* Actions */
+
+			:where(app-home) ul.actions li {
+				margin: 1em 0 0 0;
+				display: block;
+			}
+
+				:where(app-home) ul.actions li .button {
+					width: 100%;
+				}
+
+				:where(app-home) ul.actions li:first-child {
+					margin-top: 0;
+				}
+
+		/* Section/Article */
+
+			:where(app-home) section,
+:where(app-home) article {
+				margin-bottom: 20px;
+			}
+
+			:where(app-home) header {
+				margin: 0 0 1em 0;
+			}
+
+			:where(app-home) footer {
+				margin: 2em 0 0 0;
+			}
+
+		/* Box */
+
+			:where(app-home) .box {
+				padding: 25px 15px 20px 15px;
+			}
+
+				:where(app-home) .box .image.featured {
+					left: 15px;
+					top: 15px;
+					margin: -40px 0 40px -30px;
+				}
+
+				:where(app-home) .box.post header {
+					padding-top: 0;
+					margin: 0 0 1em 0;
+				}
+
+				:where(app-home) .box.post h2 {
+					font-size: 1.5em;
+					line-height: 1.5em;
+				}
+
+				:where(app-home) .box.post header > p {
+					margin-top: 0;
+					font-size: 1em;
+				}
+
+		/* Divided */
+
+			:where(app-home) ul.divided li {
+				padding: 0.5em 0 0.5em 0;
+			}
+
+		/* Contact */
+
+			:where(app-home) ul.contact li {
+				padding: 0.8em 0 0.8em 7em;
+			}
+
+				:where(app-home) ul.contact li h3 {
+					top: 0.8em;
+				}
+
+		/* Dates */
+
+			:where(app-home) ul.dates li {
+				padding-left: 6em;
+			}
+
+			:where(app-home) ul.dates h3 {
+				margin: 0 0 0.5em 0;
+			}
+
+		/* Links */
+
+			:where(app-home) ul.links li {
+				display: block;
+				padding: 0.25em 0 0 0;
+				margin: 0.25em 0 0 0;
+				border-left: 0;
+			}
+
+				:where(app-home) ul.links li:first-child {
+					padding-top: 0;
+					margin-top: 0;
+				}
+
+		/* Social */
+
+			:where(app-home) ul.social li {
+				margin: 0 0.5em 0.75em 0;
+			}
+
+		/* Icons */
+
+			:where(app-home) .icon.featured {
+				width: 8em;
+				margin: 0 0 3em 0;
+			}
+
+				:where(app-home) .icon.featured:after {
+					border-left: solid 4em transparent;
+					border-right: solid 4em transparent;
+				}
+
+		/* Header */
+
+			:where(app-home) #header {
+				text-align: center;
+				padding: 2em 0;
+			}
+
+				:where(app-home) #header h1 {
+					color: #252122;
+					font-weight: 900;
+					font-size: 1.75em;
+					letter-spacing: -0.035em;
+				}
+
+		/* Intro */
+
+			:where(app-home) #intro {
+				padding: 2em 0 0 0;
+			}
+
+				:where(app-home) #intro section {
+					padding: 40px 0 0 0;
+					margin: 20px 0 0 0;
+				}
+
+				:where(app-home) #intro h2 {
+					font-size: 1.25em;
+				}
+
+		/* Banner */
+
+			:where(app-home) #banner {
+				padding: 6em 0;
+				margin: 2em 0 0 0;
+			}
+
+				:where(app-home) #banner header {
+					padding: 1.5em 1em 1.5em 1em;
+					display: block;
+					border-radius: 0;
+				}
+
+					:where(app-home) #banner header h2 {
+						font-size: 1.5em;
+						line-height: 1.5em;
+						margin: 0 0 0.25em 0;
+					}
+
+					:where(app-home) #banner header p {
+						font-size: 1.2em;
+					}
+
+		/* Main */
+
+			:where(app-home) #main {
+				padding: 20px 0;
+			}
+
+		/* Footer */
+
+			:where(app-home) #footer {
+				padding: 40px 0 20px 0;
+			}
+
+	}
+
+	:where(app-home) #carousel {
+		background-position: center center;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		text-align: center;
+		position: absolute;
+		top: 200px;
+		left: 20vw;
+		padding: 8em 0;
+		margin: 4em 0 0 0;
+		z-index: 15px;
+	}
+
+		:where(app-home) #carousel header {
+			background-color: rgba(34, 30, 31, 0.6);
+			display: inline-block;
+			padding: 2.5em 5em;
+			border-radius: 5px;
+		}
+
+			:where(app-home) #carousel header h2 {
+				color: #fff;
+				font-weight: 700;
+				font-size: 2.5em;
+				margin: 0 0 0.65em 0;
+			}
+
+			:where(app-home) #carousel header p {
+				color: #ffeb3b;
+				padding: 0;
+				font-style: normal;
+				margin: 0;
+				font-size: 1.5em;
+			}
+

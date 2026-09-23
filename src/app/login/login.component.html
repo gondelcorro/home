@@ -1,0 +1,99 @@
+<main class="login-page">
+  <section class="brand-panel" aria-labelledby="brand-title">
+    <img
+      class="brand-logo"
+      src="assets/images/logo3.png"
+      alt="Logo de Se Juega Santiago"
+    />
+
+    <p class="eyebrow">Fútbol en Santiago del Estero</p>
+
+    <h1 id="brand-title" class="brand-title">
+      Tu próximo partido
+      <span>empieza acá.</span>
+    </h1>
+
+    <p class="brand-description">
+      Armá tu equipo, encontrá tu cancha y disfrutá de lo que nos une: el
+      fútbol.
+    </p>
+
+    <div class="football-badge" aria-hidden="true">
+      <mat-icon>sports_soccer</mat-icon>
+    </div>
+
+    <p class="brand-caption">Tu ciudad. Tu equipo. Tu próximo partido.</p>
+  </section>
+
+  <section class="form-panel" aria-labelledby="login-title">
+    <div class="login-box">
+      <a class="back-link" routerLink="/">Volver al inicio</a>
+
+      <header class="form-heading">
+        <p class="eyebrow">Tu cuenta</p>
+        <h2 id="login-title">Bienvenido de nuevo</h2>
+        <p>Ingresá tus datos para continuar.</p>
+      </header>
+
+      <form class="login-form" (ngSubmit)="iniciarSesion()" novalidate>
+        <mat-form-field appearance="outline">
+          <mat-label>Correo electrónico</mat-label>
+
+          <input
+            matInput
+            type="email"
+            name="usuario"
+            autocomplete="username"
+            [(ngModel)]="usuario"
+            required
+          />
+
+          <mat-icon matSuffix>mail_outline</mat-icon>
+          <mat-error>Ingresá tu correo electrónico.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+
+          <input
+            matInput
+            name="clave"
+            autocomplete="current-password"
+            [(ngModel)]="clave"
+            [type]="hide ? 'password' : 'text'"
+            required
+          />
+
+          <button
+            mat-icon-button
+            matSuffix
+            type="button"
+            (click)="hide = !hide"
+            [attr.aria-label]="
+              hide ? 'Mostrar contraseña' : 'Ocultar contraseña'
+            "
+          >
+            <mat-icon>
+              {{ hide ? "visibility_off" : "visibility" }}
+            </mat-icon>
+          </button>
+
+          <mat-error>Ingresá tu contraseña.</mat-error>
+        </mat-form-field>
+
+        <a class="forgot-password" [href]="url_recuperarClave">
+          ¿Olvidaste tu contraseña?
+        </a>
+
+        <button mat-flat-button class="submit-button" type="submit">
+          Iniciar sesión
+        </button>
+      </form>
+
+      <p class="signup">
+        ¿Todavía no tenés cuenta?
+        <a [href]="url_registro">Registrate</a>
+      </p>
+    </div>
+  </section>
+</main>
