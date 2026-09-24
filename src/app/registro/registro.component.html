@@ -5,7 +5,8 @@
   <form
     class="registro-form"
     [formGroup]="form"
-    (ngSubmit)="revisarDatos()"
+    (ngSubmit)="registrar()"
+    [attr.aria-busy]="enviando"
     novalidate
   >
     <mat-form-field appearance="outline">
@@ -107,11 +108,9 @@
       <p class="error-formulario" role="alert">Las contraseñas no coinciden.</p>
     }
 
-    <button mat-flat-button type="submit">Revisar datos</button>
-
-    @if (form.valid) {
-      <p role="status">Los datos ingresados tienen un formato válido.</p>
-    }
+    <button mat-flat-button type="submit" [disabled]="enviando">
+      {{ enviando ? "Registrando…" : "Crear cuenta" }}
+    </button>
   </form>
 
   <p>
