@@ -8,6 +8,31 @@ html {
   --sjs-dorado: #c49a3a;
   --sjs-blanco: #ffffff;
   --sjs-texto: #17324d;
+  --sjs-celeste-claro: #bceaf6;
+  --sjs-texto-secundario: #566675;
+  --sjs-contorno: #b4bfc8;
+  --sjs-borde: #e1e6ea;
+  --sjs-texto-sobre-fondo: #dcece5;
+  --sjs-sombra-tarjeta: 0 18px 48px rgb(5 22 23 / 24%);
+
+  // Césped y capa oscura de la propuesta visual, dibujados con CSS.
+  --sjs-fondo-publico:
+    linear-gradient(105deg, #08251ded 0%, #0c2e1fad 50%, #102b24b3 100%),
+    repeating-linear-gradient(
+      100deg,
+      transparent 0 2px,
+      #b2c58f12 2px 3px,
+      transparent 3px 6px
+    ),
+    repeating-linear-gradient(
+      78deg,
+      #163d24 0 1px,
+      #3e6835 1px 3px,
+      #365d2d 3px 5px
+    ),
+    #315631;
+  --sjs-lineas-cancha: rgb(226 239 213 / 14%);
+  --sjs-franjas-cancha: rgb(208 234 186 / 3%);
 
   @include mat.theme(
     (

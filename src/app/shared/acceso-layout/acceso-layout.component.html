@@ -1,0 +1,25 @@
+<main class="acceso">
+  <section class="presentacion" aria-labelledby="acceso-titulo">
+    <p class="ubicacion">Fútbol en Santiago del Estero</p>
+
+    <h1 id="acceso-titulo">
+      Tu próximo partido
+      <span>empieza acá.</span>
+    </h1>
+
+    <p class="descripcion">
+      Armá tu equipo, encontrá tu cancha y disfrutá de lo que nos une: el fútbol.
+    </p>
+
+    <a class="como-funciona" routerLink="/" fragment="intro">
+      Conocé cómo funciona
+      <span aria-hidden="true">↗</span>
+    </a>
+  </section>
+
+  <div class="tarjeta-formulario">
+    <ng-content />
+  </div>
+</main>
+
+<footer class="pie-acceso">Tu ciudad. Tu equipo. Tu próximo partido.</footer>

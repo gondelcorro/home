@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CabeceraComponent } from './shared/cabecera/cabecera.component';
 import { provideLottieOptions } from 'ngx-lottie';
 import {
   HTTP_INTERCEPTORS,
@@ -13,7 +14,7 @@ import { TokenRegistroInterceptor } from './_service/token-registro.interceptor'
 @NgModule({
   declarations: [AppComponent],
 
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, CabeceraComponent],
 
   providers: [
     provideHttpClient(withInterceptorsFromDi()),

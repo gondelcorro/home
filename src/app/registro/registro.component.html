@@ -1,120 +1,125 @@
-<section class="registro">
-  <h1>Creá tu cuenta</h1>
-  <p>Completá tus datos para registrarte.</p>
+<app-acceso-layout>
+  <section class="registro" aria-labelledby="registro-title">
+    <header class="form-heading">
+      <p class="eyebrow">Sumate al equipo</p>
+      <h2 id="registro-title">Creá tu cuenta</h2>
+      <p>Completá tus datos para registrarte.</p>
+    </header>
 
-  <form
-    class="registro-form"
-    [formGroup]="form"
-    (ngSubmit)="registrar()"
-    [attr.aria-busy]="enviando"
-    novalidate
-  >
-    <mat-form-field appearance="outline">
-      <mat-label>Nombre y apellido</mat-label>
+    <form
+      class="registro-form formulario-acceso"
+      [formGroup]="form"
+      (ngSubmit)="registrar()"
+      [attr.aria-busy]="enviando"
+      novalidate
+    >
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" floatLabel="always">
+        <mat-label>Nombre y apellido</mat-label>
 
-      <input
-        matInput
-        type="text"
-        formControlName="nomyape"
-        autocomplete="name"
-        required
-      />
+        <input
+          matInput
+          type="text"
+          formControlName="nomyape"
+          autocomplete="name"
+          required
+        />
 
-      @if (form.controls.nomyape.invalid) {
-        <mat-error>Ingresá tu nombre y apellido.</mat-error>
+        @if (form.controls.nomyape.invalid) {
+          <mat-error>Ingresá tu nombre y apellido.</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" floatLabel="always">
+        <mat-label>Correo electrónico</mat-label>
+
+        <input
+          matInput
+          type="email"
+          formControlName="correo"
+          autocomplete="email"
+          required
+        />
+        <mat-hint>Usá un correo al que tengas acceso.</mat-hint>
+
+        @if (form.controls.correo.hasError("required")) {
+          <mat-error>Ingresá tu correo electrónico.</mat-error>
+        } @else if (form.controls.correo.hasError("email")) {
+          <mat-error>Ingresá un correo con formato válido.</mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" floatLabel="always">
+        <mat-label>Teléfono</mat-label>
+
+        <input
+          matInput
+          type="tel"
+          inputmode="numeric"
+          formControlName="telefono"
+          autocomplete="tel"
+          required
+        />
+
+        <mat-hint>De 6 a 11 dígitos, sin espacios.</mat-hint>
+
+        @if (form.controls.telefono.hasError("required")) {
+          <mat-error>Ingresá tu teléfono.</mat-error>
+        } @else if (form.controls.telefono.invalid) {
+          <mat-error>Ingresá entre 6 y 11 dígitos, sin espacios.</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" floatLabel="always">
+        <mat-label>Contraseña</mat-label>
+
+        <input
+          matInput
+          type="password"
+          formControlName="clave"
+          autocomplete="new-password"
+          required
+        />
+
+        <mat-hint>Mínimo 10 caracteres, con letras y números.</mat-hint>
+
+        @if (form.controls.clave.hasError("required")) {
+          <mat-error>Ingresá una contraseña.</mat-error>
+        } @else if (form.controls.clave.hasError("minlength")) {
+          <mat-error>Usá al menos 10 caracteres.</mat-error>
+        } @else if (form.controls.clave.hasError("pattern")) {
+          <mat-error>Incluí al menos una letra y un número.</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" subscriptSizing="dynamic" floatLabel="always">
+        <mat-label>Confirmar contraseña</mat-label>
+
+        <input
+          matInput
+          type="password"
+          formControlName="confirmaClave"
+          autocomplete="new-password"
+          required
+        />
+
+        @if (form.controls.confirmaClave.hasError("required")) {
+          <mat-error>Repetí tu contraseña.</mat-error>
+        }
+      </mat-form-field>
+
+      @if (
+        form.hasError("clavesDistintas") && form.controls.confirmaClave.touched
+      ) {
+        <p class="error-formulario" role="alert">Las contraseñas no coinciden.</p>
       }
-    </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Correo electrónico</mat-label>
+      <button mat-flat-button class="submit-button" type="submit" [disabled]="enviando">
+        {{ enviando ? "Registrando…" : "Crear cuenta" }}
+      </button>
+    </form>
 
-      <input
-        matInput
-        type="email"
-        formControlName="correo"
-        autocomplete="email"
-        required
-      />
-      <mat-hint>Usá un correo al que tengas acceso.</mat-hint>
-
-      @if (form.controls.correo.hasError("required")) {
-        <mat-error>Ingresá tu correo electrónico.</mat-error>
-      } @else if (form.controls.correo.hasError("email")) {
-        <mat-error>Ingresá un correo con formato válido.</mat-error>
-      }
-    </mat-form-field>
-    <mat-form-field appearance="outline" subscriptSizing="dynamic">
-      <mat-label>Teléfono</mat-label>
-
-      <input
-        matInput
-        type="tel"
-        inputmode="numeric"
-        formControlName="telefono"
-        autocomplete="tel"
-        required
-      />
-
-      <mat-hint>De 6 a 11 dígitos, sin espacios.</mat-hint>
-
-      @if (form.controls.telefono.hasError("required")) {
-        <mat-error>Ingresá tu teléfono.</mat-error>
-      } @else if (form.controls.telefono.invalid) {
-        <mat-error>Ingresá entre 6 y 11 dígitos, sin espacios.</mat-error>
-      }
-    </mat-form-field>
-
-    <mat-form-field appearance="outline" subscriptSizing="dynamic">
-      <mat-label>Contraseña</mat-label>
-
-      <input
-        matInput
-        type="password"
-        formControlName="clave"
-        autocomplete="new-password"
-        required
-      />
-
-      <mat-hint>Mínimo 10 caracteres, con letras y números.</mat-hint>
-
-      @if (form.controls.clave.hasError("required")) {
-        <mat-error>Ingresá una contraseña.</mat-error>
-      } @else if (form.controls.clave.hasError("minlength")) {
-        <mat-error>Usá al menos 10 caracteres.</mat-error>
-      } @else if (form.controls.clave.hasError("pattern")) {
-        <mat-error>Incluí al menos una letra y un número.</mat-error>
-      }
-    </mat-form-field>
-
-    <mat-form-field appearance="outline" subscriptSizing="dynamic">
-      <mat-label>Confirmar contraseña</mat-label>
-
-      <input
-        matInput
-        type="password"
-        formControlName="confirmaClave"
-        autocomplete="new-password"
-        required
-      />
-
-      @if (form.controls.confirmaClave.hasError("required")) {
-        <mat-error>Repetí tu contraseña.</mat-error>
-      }
-    </mat-form-field>
-
-    @if (
-      form.hasError("clavesDistintas") && form.controls.confirmaClave.touched
-    ) {
-      <p class="error-formulario" role="alert">Las contraseñas no coinciden.</p>
-    }
-
-    <button mat-flat-button type="submit" [disabled]="enviando">
-      {{ enviando ? "Registrando…" : "Crear cuenta" }}
-    </button>
-  </form>
-
-  <p>
-    ¿Ya tenés una cuenta?
-    <a routerLink="/login">Iniciá sesión</a>
-  </p>
-</section>
+    <p class="cambio-acceso">
+      ¿Ya tenés una cuenta?
+      <a routerLink="/login">Iniciá sesión</a>
+    </p>
+  </section>
+</app-acceso-layout>

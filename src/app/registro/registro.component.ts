@@ -1,3 +1,4 @@
+import { AccesoLayoutComponent } from '../shared/acceso-layout/acceso-layout.component';
 import { Component, DestroyRef, inject } from '@angular/core';
 import {
   FormControl,
@@ -33,6 +34,7 @@ const clavesCoinciden: ValidatorFn = (grupo) => {
   imports: [
     ReactiveFormsModule,
     RouterLink,
+    AccesoLayoutComponent,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,

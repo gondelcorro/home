@@ -1,70 +1,61 @@
-/*primero en el móvil (mobile first)*/
-nav {
-  margin: 0 0 0 0;
-}
-
-nav > ul {
-  list-style: none;
-  padding: 10px;
-  margin: 0px;
-  background: #f3f3f3;
-}
-
-nav > ul > li {
-  font-style: italic;
-  margin: 0 0.35em 0 0.35em;
-}
-
-nav > ul > li > a {
-  border-radius: 5px;
-  color: #5d5d5d;
-  text-decoration: none;
-  padding: 0.6em 1.2em 0.6em 1.2em;
-}
-
-nav li a {
-  color: white;
+:host {
   display: block;
-  text-decoration: none;
-  padding: .2em .2em;
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--sjs-fondo-publico);
 }
 
-nav li a:hover {
-  background: #E31E24;
-  color: white !important;
+/* La decoración queda detrás de la navegación y de los formularios. */
+.fondo-cancha {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
 }
 
-nav > ul > li.current > a {
-  background: #E31E24;
-  color: #fff !important;
+.campo {
+  position: absolute;
+  top: 184px;
+  left: calc(50% - 715px);
+  box-sizing: border-box;
+  width: 830px;
+  height: 490px;
+  transform: rotate(-21deg) skewX(-13deg);
+  border: 3px solid var(--sjs-lineas-cancha);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--sjs-franjas-cancha) 0 92px,
+    transparent 92px 184px
+  );
 }
 
-@media screen and (min-width: 480px) {
-  nav ul {
-    display: flex;
-    justify-content: center;
+.campo::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 50%;
+  border-left: 3px solid var(--sjs-lineas-cancha);
+}
+
+.campo::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 168px;
+  height: 168px;
+  box-sizing: border-box;
+  border: 3px solid var(--sjs-lineas-cancha);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 860px) {
+  .campo {
+    top: 140px;
+    left: calc(50% - 430px);
+    transform: rotate(-21deg) skewX(-13deg) scale(0.9);
   }
-}
-
-.banner {
-  position: relative;
-  width: 100%;
-  height: 180px;
-
-  background-image: url('/assets/images/banner-bg.png');
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo {
-  height: 85px;
-}
-
-.texto {
-  position: relative;
-  z-index: 1;
 }

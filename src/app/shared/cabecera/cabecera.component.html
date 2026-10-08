@@ -1,0 +1,61 @@
+<header class="cabecera">
+  <a
+    class="marca"
+    routerLink="/"
+    aria-label="Se Juega Santiago: ir al inicio"
+    (click)="cerrarMenu()"
+  >
+    <img src="assets/images/logo3.png" alt="Se Juega Santiago" />
+  </a>
+
+  <button
+    #botonMenu
+    class="menu-toggle"
+    type="button"
+    aria-controls="navegacion-principal"
+    [attr.aria-expanded]="menuAbierto"
+    (click)="menuAbierto = !menuAbierto"
+  >
+    {{ menuAbierto ? 'Cerrar' : 'Menú' }}
+  </button>
+
+  <nav
+    id="navegacion-principal"
+    aria-label="Navegación principal"
+    [class.abierto]="menuAbierto"
+    (keydown.escape)="cerrarMenu(); botonMenu.focus()"
+  >
+    <a
+      routerLink="/"
+      routerLinkActive="activo"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ariaCurrentWhenActive="page"
+      (click)="cerrarMenu()"
+    >
+      Inicio
+    </a>
+
+    <a routerLink="/" fragment="intro" (click)="cerrarMenu()">
+      Cómo funciona
+    </a>
+
+    <a
+      routerLink="/login"
+      routerLinkActive="activo"
+      ariaCurrentWhenActive="page"
+      (click)="cerrarMenu()"
+    >
+      Ingresar
+    </a>
+
+    <a
+      class="registro"
+      routerLink="/registro"
+      routerLinkActive="activo"
+      ariaCurrentWhenActive="page"
+      (click)="cerrarMenu()"
+    >
+      Registrate
+    </a>
+  </nav>
+</header>

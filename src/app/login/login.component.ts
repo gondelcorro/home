@@ -1,3 +1,4 @@
+import { AccesoLayoutComponent } from '../shared/acceso-layout/acceso-layout.component';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -17,6 +18,7 @@ import { environment } from '../../environments/environment';
   imports: [
     FormsModule,
     RouterLink,
+    AccesoLayoutComponent,
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
